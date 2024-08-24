@@ -1,0 +1,10 @@
+services:
+    cover-paint:
+        container_name: cover-paint
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: cover-paint
+        ports:
+            - 7530:3000
+        restart: unless-stopped
