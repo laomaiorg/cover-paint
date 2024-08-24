@@ -185,14 +185,14 @@ function Editor() {
               </div>
 
               <div
-                className={`absolute left-0 top-0 z-30 h-full w-full text-neutral-400 ${coverFont}`}
+                className={`absolute left-0 top-4 z-30 h-full w-full text-center text-neutral-400 ${coverFont}`}
               >
-                <div className="flex h-full w-full flex-col-reverse gap-1 p-1 md:gap-2 md:p-2">
+                <div className="flex justify-center h-full w-full flex-col-reverse gap-1 p-1 md:gap-2 md:p-2">
                   {/* author */}
                   {(blogAuthor || avatarImage) && (
-                    <div className="flex items-center gap-1 text-xs md:gap-2 md:text-lg">
+                    <div className="flex items-center justify-center gap-1 text-xs md:gap-2 md:text-lg">
                       {avatarImage && (
-                        <Avatar className="h-5 w-5 md:h-10 md:w-10">
+                        <Avatar className="h-5 w-5">
                           <AvatarImage src={avatarImage} />
                           <AvatarFallback>CN</AvatarFallback>
                         </Avatar>
@@ -203,12 +203,12 @@ function Editor() {
 
                   {/* abstract */}
                   {blogAbstract && (
-                    <div className="text-xs md:text-lg">{blogAbstract}</div>
+                    <div className="text-xs md:text-2xl">{blogAbstract}</div>
                   )}
 
                   {/* title */}
                   {blogTitle && (
-                    <div className="text-sm text-slate-50 md:text-xl">
+                    <div className="text-sm text-slate-50 md:text-4xl md:font-bold">
                       {blogTitle}
                     </div>
                   )}

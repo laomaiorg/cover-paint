@@ -72,7 +72,7 @@ const useBlogTitleState = create<BlogTitle>()((set) => ({
 
 const useBlogAbstractState = create<BlogAbstract>()((set) => ({
   blogAbstract:
-    process.env.NEXT_PUBLIC_BLOG_ABSTRACT || "A tutorial on creating a website using Next.js framework and styling it with Tailwind CSS.",
+    process.env.NEXT_PUBLIC_BLOG_ABSTRACT || "",
   setBlogAbstract: (val: string) => set(() => ({ blogAbstract: val })),
 }));
 
