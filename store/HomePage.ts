@@ -66,23 +66,23 @@ const useCoverTypeState = create<CoverType>()((set) => ({
 }));
 
 const useBlogTitleState = create<BlogTitle>()((set) => ({
-  blogTitle: "How to build a website with Next.js and Tailwind CSS",
+  blogTitle: process.env.NEXT_PUBLIC_BLOG_TITLE || "How to build a website with Next.js and Tailwind CSS",
   setBlogTitle: (val: string) => set(() => ({ blogTitle: val })),
 }));
 
 const useBlogAbstractState = create<BlogAbstract>()((set) => ({
   blogAbstract:
-    "A tutorial on creating a website using Next.js framework and styling it with Tailwind CSS.",
+    process.env.NEXT_PUBLIC_BLOG_ABSTRACT || "A tutorial on creating a website using Next.js framework and styling it with Tailwind CSS.",
   setBlogAbstract: (val: string) => set(() => ({ blogAbstract: val })),
 }));
 
 const useBlogAuthorState = create<BlogAuthor>()((set) => ({
-  blogAuthor: "xiaole - Sep 26",
+  blogAuthor: process.env.NEXT_PUBLIC_BLOG_AUTHOR || "xiaole - Sep 26",
   setBlogAuthor: (val: string) => set(() => ({ blogAuthor: val })),
 }));
 
 const useAvatarImageState = create<AvatarImage>()((set) => ({
-  avatarImage: undefined,
+  avatarImage: process.env.NEXT_PUBLIC_AVATAR_IMAGE_URL || undefined,
   setAvatarImage: (val: string | undefined) =>
     set(() => ({ avatarImage: val })),
 }));
